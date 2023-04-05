@@ -466,7 +466,8 @@ pip install -e &quot;.[dev]&quot;
   gap: 1rem;
 }
 ;">
-<h1>A stupid example.</h1>
+<h1>Actually make your tests tests.</h1>
+<p>(A stupid example.)</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a, b</span>):
     <span class="hljs-keyword">return</span> a + b
 
@@ -531,13 +532,41 @@ pip install -e &quot;.[dev]&quot;
   gap: 1rem;
 }
 ;">
+<h1>Test behavior, not implementation details.</h1>
+<p>This <img class="emoji" draggable="false" alt="👆" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f446.svg" data-marp-twemoji=""/> is a vaguely famous mantra.</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">test_adding_data</span>():
+    data = mylibrary.load_data(<span class="hljs-string">&quot;naturepaper.tsv&quot;</span>)
+    data.add(datum)
+    <span class="hljs-keyword">assert</span> data[:-<span class="hljs-number">1</span>] == datum
+
+<span class="hljs-comment"># better - decide on the API behavior</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">test_retrieving_data_added</span>():
+    <span class="hljs-string">&quot;&quot;&quot;This test is robust if I change how I store `data`
+     under the hood (array or df or whatever)&quot;&quot;&quot;</span>
+    data = mylibrary.load_data(<span class="hljs-string">&quot;naturepaper.tsv&quot;</span>)
+    data.add(datum)
+    <span class="hljs-keyword">assert</span> data.get(datum.title) == datum
+</code></pre>
+<footer>S Cunliffe, TDD @ SWC pyClub, 2023-04-05.</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-footer="S Cunliffe, TDD @ SWC pyClub, 2023-04-05." data-theme="default" data-style=".ccolumns {
+  display: grid;
+  grid-template-columns: 50% auto;
+  gap: 1rem;
+}
+" style="--footer:S Cunliffe, TDD @ SWC pyClub, 2023-04-05.;--theme:default;--style:.ccolumns {
+  display: grid;
+  grid-template-columns: 50% auto;
+  gap: 1rem;
+}
+;">
 <h1>Also test failures.</h1>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">with</span> pytest.raises(PreciselyTheExceptionYouAreExpecting):
     do.illegal_thing()
 </code></pre>
 <footer>S Cunliffe, TDD @ SWC pyClub, 2023-04-05.</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-footer="S Cunliffe, TDD @ SWC pyClub, 2023-04-05." data-theme="default" data-style=".ccolumns {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-footer="S Cunliffe, TDD @ SWC pyClub, 2023-04-05." data-theme="default" data-style=".ccolumns {
   display: grid;
   grid-template-columns: 50% auto;
   gap: 1rem;
@@ -560,7 +589,7 @@ pip install -e &quot;.[dev]&quot;
 <p><code>dataclasses.dataclass</code> getters and setters probably don't need testing.</p>
 <footer>S Cunliffe, TDD @ SWC pyClub, 2023-04-05.</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-footer="S Cunliffe, TDD @ SWC pyClub, 2023-04-05." data-theme="default" data-style=".ccolumns {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-footer="S Cunliffe, TDD @ SWC pyClub, 2023-04-05." data-theme="default" data-style=".ccolumns {
   display: grid;
   grid-template-columns: 50% auto;
   gap: 1rem;
@@ -574,7 +603,7 @@ pip install -e &quot;.[dev]&quot;
 <h1>Appendices.</h1>
 <footer>S Cunliffe, TDD @ SWC pyClub, 2023-04-05.</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-footer="S Cunliffe, TDD @ SWC pyClub, 2023-04-05." data-theme="default" data-style=".ccolumns {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-footer="S Cunliffe, TDD @ SWC pyClub, 2023-04-05." data-theme="default" data-style=".ccolumns {
   display: grid;
   grid-template-columns: 50% auto;
   gap: 1rem;
@@ -597,7 +626,7 @@ pip install -e &quot;.[dev]&quot;
 </ul>
 <footer>S Cunliffe, TDD @ SWC pyClub, 2023-04-05.</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-footer="S Cunliffe, TDD @ SWC pyClub, 2023-04-05." data-theme="default" data-style=".ccolumns {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-footer="S Cunliffe, TDD @ SWC pyClub, 2023-04-05." data-theme="default" data-style=".ccolumns {
   display: grid;
   grid-template-columns: 50% auto;
   gap: 1rem;
@@ -617,7 +646,7 @@ pip install -e &quot;.[dev]&quot;
 </ul>
 <footer>S Cunliffe, TDD @ SWC pyClub, 2023-04-05.</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-footer="S Cunliffe, TDD @ SWC pyClub, 2023-04-05." data-theme="default" data-style=".ccolumns {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-footer="S Cunliffe, TDD @ SWC pyClub, 2023-04-05." data-theme="default" data-style=".ccolumns {
   display: grid;
   grid-template-columns: 50% auto;
   gap: 1rem;

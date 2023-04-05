@@ -240,7 +240,9 @@ footer: S Cunliffe, TDD @ SWC pyClub, 2023-04-05.
 
 ---
 
-# A stupid example.
+# Actually make your tests tests.
+
+(A stupid example.)
 
 ```python
 def add(a, b):
@@ -280,6 +282,26 @@ def test_add(a, b, res):
 ```
 
 Also think lookup tables, v. small test data committed along with the code.
+
+---
+
+# Test behavior, not implementation details.
+This 👆 is a vaguely famous mantra.
+
+```python
+def test_adding_data():
+    data = mylibrary.load_data("naturepaper.tsv")
+    data.add(datum)
+    assert data[:-1] == datum
+
+# better - decide on the API behavior
+def test_retrieving_data_added():
+    """This test is robust if I change how I store `data`
+     under the hood (array or df or whatever)"""
+    data = mylibrary.load_data("naturepaper.tsv")
+    data.add(datum)
+    assert data.get(datum.title) == datum
+```
 
 ---
 
