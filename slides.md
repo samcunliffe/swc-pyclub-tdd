@@ -2,20 +2,10 @@
 marp: true
 theme: default
 style: |
-  .left-skewed-columns {
-    display: grid;
-    grid-template-columns: 80% auto;
-    gap: 1rem;
-  }
   .ccolumns {
     display: grid;
     grid-template-columns: 50% auto;
     gap: 1rem;
-  }
-  .overimage-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-shadow: 0px 0px 20px #ffffff;
   }
 ---
 
@@ -49,31 +39,24 @@ footer: S Cunliffe, TDD @ SWC pyClub, 2023-04-05.
 
 # Who is this guy?
 
-<div class="left-skewed-columns">
-<div>
+![bg left:30%](_assets/b2.png)
 
-- In a previous life wrote software for a particle physics experiment.
-- Now I write software in [ARC](https://ucl.ac.uk/arc) (UCL's central RSE team.)
-  - You have [specialist RSEs in Adam's Neuroinformatics Unit](https://neuroinformatics.dev/people.html)
-    <div style="color:grey">(and have a cooler logo than us)</div>
+- In a previous life, I wrote software for a particle physics experiment.
+- Now, I write software in [ARC](https://ucl.ac.uk/arc) (UCL's central RSE team.)
+  - You have [specialist RSEs](https://neuroinformatics.dev/people.html)
+    <div style="color:grey">(and they have a cooler logo than us)</div>
 - We're collaborating with Niko (mostly) on a project with Branco and Margrie labs.
 - Niko asked me to talk to your gang.
 
-</div>
-<div>
+<center>
 
-![](_assets/arclogo.jpg)
+![w:70](_assets/arclogo.jpg)  &emsp; ![w:70](_assets/niulogo.png)
 
-![](_assets/niulogo.png)
-
-</div>
+</center>
 
 ---
 
 # 💙 Python, 💛 TDD.
-
-<div class="left-skewed-columns">
-<div>
 
 - Even though it wasn't my first, python is my favourite.
 - I probably "think" in (bad) python.
@@ -81,12 +64,7 @@ footer: S Cunliffe, TDD @ SWC pyClub, 2023-04-05.
 - I'm a fan of TDD. I've used it a fair bit.
   - I might be a bit of an evangelist.
 
-</div>
-<div>
-
-![](_assets/python.png)
-
-</div>
+![bg right:40% w:300](_assets/python.png)
 
 ---
 
