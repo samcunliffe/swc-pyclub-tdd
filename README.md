@@ -5,6 +5,8 @@ I made it for a talk at the [@SainsburyWellcomeCentre](https://github.com/Sainsb
 
 Slides are made with [marp](https://marp.app/) and I've [put them online with GitHub pages](https://scnlf.me/swc-pyclub-tdd).
 
+There is an [example branch: `tdd-demo`](https://github.com/samcunliffe/swc-pyclub-tdd/compare/main...tdd-demo) demonstrating :red_circle::green_circle::arrows_clockwise:.
+
 ## Further reading
 
 - [Google's sw dev playbook](https://abseil.io/resources/swe-book) → [Ch. 11: Testing](https://abseil.io/resources/swe-book/html/ch11.html)
